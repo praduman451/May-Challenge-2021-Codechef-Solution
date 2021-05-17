@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+typedef unsigned long long P;
+
+int main()
+{ int t;
+cin>>t;
+while(t--)
+{    P N,M,count=0;
+     cin>>N>>M;
+vector <P>me(N+1,1);
+
+for(P i=2;i<=N;i++)
+{
+    P a=M%i;
+    count+=me[a];
+    for(P j=a;j<=N;j+=i)
+        {
+            me[j]++;
+        }
+}
+cout<<count<<endl;
+}
+return 0;
+}
