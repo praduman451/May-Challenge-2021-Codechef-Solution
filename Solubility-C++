@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+#define p long long int
+
+int main() {
+	p no, A, B, C;
+	cin >>no;
+	while(no--){
+	    cin>>A>>B>>C;
+	    cout<<(B+((100-A)*C))*10<<endl;
+	}
+	return 0;
+}
